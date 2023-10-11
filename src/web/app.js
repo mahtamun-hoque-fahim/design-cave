@@ -1,44 +1,26 @@
-document.addEventListener("contextmenu", function (fahim) {
-    fahim.preventDefault();
-  });
+// document.addEventListener("contextmenu", function (fahim) {
+//     fahim.preventDefault();
+//   });
   
-  document.onkeydown = function (e) {
-    if (e.keyCode == 123) {
-      return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
-      return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
-      return false;
-    }
-    if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
-      return false;
-    }
-    if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
-      return false;
-    }
-  };
+//   document.onkeydown = function (e) {
+//     if (e.keyCode == 123) {
+//       return false;
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode == "I".charCodeAt(0)) {
+//       return false;
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode == "J".charCodeAt(0)) {
+//       return false;
+//     }
+//     if (e.ctrlKey && e.keyCode == "U".charCodeAt(0)) {
+//       return false;
+//     }
+//     if (e.ctrlKey && e.shiftKey && e.keyCode == "C".charCodeAt(0)) {
+//       return false;
+//     }
+//   };
 
-  
-  // window.onload = function () {
-  //   document.documentElement.classList.add("show-time");
-  // };
-  const primaryNav = document.querySelector(".primary-navigation");
-  const navToggle = document.querySelector(".mobile-nav-toggle");
-  
-  navToggle.addEventListener("click", () => {
-    const visibility = primaryNav.getAttribute("data-visible");
-  
-    if (visibility === "false") {
-      primaryNav.setAttribute("data-visible", true);
-      navToggle.setAttribute("aria-expanded", true);
-    } else if (visibility === "true") {
-      primaryNav.setAttribute("data-visible", false);
-      navToggle.setAttribute("aria-expanded", false);
-    }
-  });
-  
+   
   // =-===========  infinite scroll animation  ===================//
   
   const scrollers = document.querySelectorAll(".scroller");
