@@ -19,13 +19,7 @@ document.addEventListener("contextmenu", function (fahim) {
       return false;
     }
   };
-  let clickedElement = document.querySelector(".pagenr");
-  clickedElement.addEventListener("click", () => {
-    clickedElement.innerHTML = "Page Not ready!";
-    clickedElement.style.cssText =
-      "display: grid;place-content: center;height: 7vh;width: 13vw;border-radius: 50px;background-color: var(--cb3);color: var(--cw6);font-weight: 400;border: 2.5px transparent;border-radius: 50px;cursor: pointer;width:100%";
-  });
-  
+
   
   // window.onload = function () {
   //   document.documentElement.classList.add("show-time");
@@ -43,24 +37,6 @@ document.addEventListener("contextmenu", function (fahim) {
       primaryNav.setAttribute("data-visible", false);
       navToggle.setAttribute("aria-expanded", false);
     }
-  });
-  
-  let builtBy = document.querySelector(".built-by");
-  let codeCounter = document.querySelector(".codeCounter");
-  let heart = document.querySelector(".fa-heart");
-  let blue = document.querySelector(".blue");
-  
-  codeCounter.innerHTML = 478 + 698 + 330 + 47;
-  builtBy.addEventListener("mouseover", () => {
-    codeCounter.style.cssText = "text-shadow:0px 0px 2em var(--cr);";
-    heart.style.cssText = "filter:drop-shadow(0px 0px 1em var(--cr));";
-    blue.style.cssText = "filter:drop-shadow(0px 0px 1em var(--c10lv));";
-  });
-  builtBy.addEventListener("mouseout", () => {
-    codeCounter.style.cssText =
-      "text-shadow:0px 0px 0em var(--cr);filter:drop-shadow(0px 0px 0em var(--c10lv));";
-    heart.style.cssText = "filter:drop-shadow(0px 0px 0em var(--cr));";
-    blue.style.cssText = "filter:drop-shadow(0px 0px 0em var(--c10lv));";
   });
   
   // =-===========  infinite scroll animation  ===================//
