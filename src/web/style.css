@@ -1,0 +1,135 @@
+
+/* ===================== worked with section =================== */
+
+
+body>section.worked {
+    text-align: center;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: var(--cb1);
+  }
+  
+  body>section.worked>div {
+    display: grid;
+    place-content: center;
+    height: fit-content;
+    width: 80vw;
+  }
+  
+  body>section.worked>div>h2 {
+    padding-bottom: 3vh;
+    font-weight: 300;
+  }
+  
+  body>section.worked>div>hr {
+    margin: 0 auto 6vh auto;
+    width: 15vw;
+  }
+  
+  section.worked>div>div.logo-list>ul>li>div {
+    aspect-ratio: 1;
+    width: 15vw;
+    background-color: var(--cb2);
+    border: .5px solid var(--cb3);
+    border-radius: 2rem;
+    display: grid;
+    place-content: center;
+    padding: 1rem;
+  }
+  
+  section.worked>div>div.logo-list>ul>li>div>img.worked-logo {
+    height: 10vh;
+  }
+  
+  section.worked>div>div.logo-list>ul>li>div:hover>img.worked-logo {
+    filter: drop-shadow(0px 0px 2rem #ffffff50);
+  }
+  
+  section.worked>div>div.logo-list>ul>li>div>img.change-size {
+    height: 20vh;
+  }
+  
+  /* infinite scroller  */
+  .scroller .logo-list {
+  
+    width: 80vw;
+  }
+  
+  .scroller__inner {
+    padding-block: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .scroller[data-animated="true"] {
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+        transparent,
+        white 20%,
+        white 80%,
+        transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+  }
+  
+  .scroller[data-animated="true"] .scroller__inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+  }
+  
+  .scroller[data-direction="right"] {
+    --_animation-direction: reverse;
+  }
+  
+  .scroller[data-direction="left"] {
+    --_animation-direction: forwards;
+  }
+  
+  .scroller[data-speed="fast"] {
+    --_animation-duration: 20s;
+  }
+  
+  .scroller[data-speed="slow"] {
+    --_animation-duration: 60s;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+  
+  .tag-list {
+    margin: 0;
+    padding-inline: 0;
+    list-style: none;
+  }
+  
+  .tag-list li {
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  section.worked>div>div.logo-list>ul>li>label {
+    color: var(--cw3);
+    border: .5px dashed var(--cb4);
+    padding: .3rem .8rem;
+    font-size: .7rem;
+    border-radius: 1rem;
+    margin: 4rem -5rem 0 0;
+  }
+  
+  section.worked>div>div.logo-list>ul>li:hover>label {
+    background-color: var(--cb4);
+  }
+  
+  /* for testing purposed to ensure the animation lined up correctly */
+  .test {
+    background: red !important;
+  }
+  
+  body>section.worked .worked-logo {
+    aspect-ratio: 1/1;
+  }
